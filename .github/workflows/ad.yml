@@ -1,0 +1,16 @@
+## baiduPush.yml
+name: 'ad'
+ 
+#on:
+#  push:
+#  schedule:
+#    - cron: '0 23 * * *'
+on:
+  schedule:
+  - cron: '*/5 * * * *' # 每5分钟一次，测试用
+jobs:
+  bot:
+    runs-on: ubuntu-latest # 运行环境为最新版的Ubuntu
+    steps:
+      - name: 'Checkout codes' # 步骤一，获取仓库代码
+      - name: 'Run 1.sh' # 步骤二，执行sh命令文件
